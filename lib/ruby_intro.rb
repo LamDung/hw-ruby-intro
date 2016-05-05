@@ -53,7 +53,15 @@ def starts_with_consonant? s
 end
 
 def binary_multiple_of_4? s
-  # YOUR CODE HERE
+  if /[a-z]/.match(s.downcase)
+    return false
+  elsif s == ''
+    return false
+  elsif s.to_i % 4 == 0
+    return true
+  else
+    return false
+  end
 end
 
 # Part 3
@@ -61,3 +69,5 @@ end
 class BookInStock
 # YOUR CODE HERE
 end
+
+puts binary_multiple_of_4?('4')
